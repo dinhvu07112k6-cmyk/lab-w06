@@ -1,4 +1,8 @@
-﻿namespace BorrowingSystem.Models;
+﻿/****************/
+//Mã sinh viên: 202419021   
+//Họ tên  : Phạm Đình Vũ 
+/****************/  
+namespace BorrowingSystem.Models;
 
 public interface IBorrower
 {

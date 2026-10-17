@@ -1,4 +1,8 @@
-﻿namespace BorrowingSystem.Exceptions;
+﻿/****************/
+//Mã sinh viên: 202419021   
+//Họ tên  : Phạm Đình Vũ 
+/****************/
+namespace BorrowingSystem.Exceptions;
 
 public class DuplicateDeviceException : BorrowingException
 {
