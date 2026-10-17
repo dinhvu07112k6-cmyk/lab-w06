@@ -2,6 +2,7 @@
 
 namespace BorrowingSystem.Models;
 
+// Thuộc tính 
 public class BorrowItem
 {
     public TeachingDevice Device { get; }
@@ -10,6 +11,7 @@ public class BorrowItem
     public DateTime? ReturnedDate { get; private set; }
     public bool IsReturned => ReturnedDate.HasValue;
 
+    // Constructor
     public BorrowItem(TeachingDevice device, DateTime borrowedDate, DateTime dueDate)
     {
         Device = device ?? throw new ArgumentNullException(nameof(device));
@@ -21,6 +23,7 @@ public class BorrowItem
         ReturnedDate = null;
     }
 
+    // Phương thức trả thiết bị
     public void Return(DateTime returnedDate)
     {
         if (IsReturned)
@@ -32,6 +35,7 @@ public class BorrowItem
         Device.MarkAsAvailable();
     }
 
+    // Phương thức tính phí nộp muộn ( tự thêm^^ )
     public decimal CalculateLateFee(decimal dailyRate = 10000m)
     {
         if (!IsReturned || ReturnedDate <= DueDate)

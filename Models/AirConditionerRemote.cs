@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using BorrowingSystem.Enums;
 
-namespace lab_w06.Models
+namespace BorrowingSystem.Models;
+
+// Thuộc tính và phương thức của điều khiển điều hòa 
+public class AirConditionerRemote : TeachingDevice
 {
-    internal class AirConditionerRemote
-    {
-    }
+    public AirConditionerRemote(string deviceId, string name, int yearOfUse, decimal purchasePrice, int maxBorrowDays = 1, DeviceStatus status = DeviceStatus.Available)
+        : base(deviceId, name, yearOfUse, purchasePrice, maxBorrowDays, status) { }
+
+    public override decimal CalculateAnnualMaintenanceCost() => PurchasePrice * 0.05m;
 }

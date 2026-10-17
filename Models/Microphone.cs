@@ -2,6 +2,7 @@
 
 namespace BorrowingSystem.Models;
 
+// Thuộc tính và phương thức
 public class Microphone : TeachingDevice
 {
     public Microphone(string deviceId, string name, int yearOfUse, decimal purchasePrice, int maxBorrowDays = 1, DeviceStatus status = DeviceStatus.Available)

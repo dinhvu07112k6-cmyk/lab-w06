@@ -2,6 +2,7 @@
 
 namespace BorrowingSystem.Models;
 
+// Thuộc tính và Phương thức   của máy chiếu 
 public class ProjectorRemote : TeachingDevice
 {
     public ProjectorRemote(string deviceId, string name, int yearOfUse, decimal purchasePrice, int maxBorrowDays = 1, DeviceStatus status = DeviceStatus.Available)

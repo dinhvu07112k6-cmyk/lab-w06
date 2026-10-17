@@ -2,7 +2,7 @@
 
 namespace BorrowingSystem.Exceptions
 {
-    public class BorrowLimitExceededException : Exception
+    public class BorrowLimitExceededException : BorrowingException
     {
         public string BorrowerId { get; }
         public int MaximumDevices { get; }
