@@ -77,9 +77,9 @@ static void RunExceptionTests()
 
 static void ExecuteTestCase(string testName, Action action)
 {
+    Console.Write($"[{testName}] -> ");
     try
     {
-        Console.Write($"[{testName}] -> ");
         action();
         Console.WriteLine("Thất bại (Không phát sinh ngoại lệ mong muốn)!");
     }
@@ -90,5 +90,10 @@ static void ExecuteTestCase(string testName, Action action)
     catch (Exception ex)
     {
         Console.WriteLine($"Ngoại lệ hệ thống khác: {ex.Message}");
+    }
+    finally
+    {
+        // Khối finally luôn chạy dù test thành công hay bắt được exception
+        Console.WriteLine("   --> [Hoàn tất ca kiểm thử]");
     }
 }
